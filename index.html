@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Memory Game</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <script src="app.js" charset="utf-8"></script>
+  </head>
+
+  <body>
+    <center>
+      <h2>MeMorY GamE</h2>
+    </center>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <div class="container">
+      <!-- timer  -->
+
+      <!-- rules  -->
+
+      <div class="rules">
+        <h3 class="rules-heading">Rules</h3>
+        <ul class="rule-items">
+          <li>There are 6 pairs of identical items.</li>
+          <li>Try to find them all in minimum number of moves and time.</li>
+          <li>Timer will start when you click on any tile.</li>
+          <li>
+            Number of moves and time will be displayed after matching all of
+            them.
+          </li>
+        </ul>
+      </div>
+      <!-- grid  -->
+      <div
+        style="
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          height: 600px;
+        "
+      >
+        <center>
+          <div class="grid"></div>
+        </center>
+        <br />
+        <br />
+        <br />
+        <br />
+        <center>
+          <span
+            style="
+              border-style: solid;
+              background: white;
+              display: inline-block;
+            "
+          >
+            <h1 style="font-family: 'courier'">
+              SCORE:
+              <span id="result"></span>
+            </h1>
+          </span>
+        </center>
+        <br />
+        <br />
+        <br />
+        <br />
+        <center>
+          <div>
+            <input
+              type="button"
+              class="button"
+              value="PLAY AGAIN!!!"
+              id="playagain"
+            />
+          </div>
+        </center>
+      </div>
+
+      <div class="wrapper" style="margin-top: 5%">
+        <div class="display">
+          <div id="time">00 : 00</div>
+        </div>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </body>
+</html>

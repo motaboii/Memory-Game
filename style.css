@@ -5,12 +5,29 @@
 }
 body {
   min-height: 100%;
-  background-image: url(bg.png);
+  background-image: url(output.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
   background-attachment: fixed;
 }
+
+.score-button-container {
+  display: flex;
+  flex-direction: column; /* Align items vertically */
+  justify-content: center; /* Align items vertically in the center */
+  align-items: center; /* Align items horizontally in the center */
+  gap: 20px; /* Adds space between the score display and the button */
+  text-align: center;
+  color: #fff;
+}
+
+.starry-text {
+  font-family: 'Courier';
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.8), 0 0 15px rgba(255, 255, 255, 0.6), 0 0 20px rgba(255, 255, 255, 0.4);
+}
+
+
 .grid {
   display: flex;
   flex-wrap: wrap;
@@ -31,20 +48,17 @@ body {
   font-family: 'Poppins', sans-serif;
   width: 400px;
   height: 350px;
-  background-color: #000;
-  color: white;
+  background: none; /* Removes background color */
+  color: #D3D3D3; /* Starry grey text color */
   padding: 2rem;
   font-size: 18px;
-  border-radius: 1.5rem;
 }
-.rules-heading {
-  text-align: center;
-  font-size: 32px;
-  font-weight: 700;
-}
-.rule-items li {
+
+.rules-heading, .rule-items li {
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.8), 0 0 15px rgba(255, 255, 255, 0.6), 0 0 20px rgba(255, 255, 255, 0.4); /* Optional: adds subtle glowing effect */
   padding: 1rem;
 }
+
 .score {
   background-color: wheat;
 }
@@ -136,6 +150,19 @@ h2 {
   -webkit-animation: blink 12s infinite;
 }
 
+h2 {
+  font-size: calc(10px + 6vh);
+  line-height: calc(20px + 20vh);
+
+  text-shadow: 0 0 5px #ffa500, 0 0 15px #ffa500, 0 0 20px #ffa500,
+    0 0 40px #ffa500, 0 0 60px #ff0000, 0 0 10px #ff8d00, 0 0 98px #ff0000;
+  color: #fff6a9;
+  font-family: 'Sacramento', cursive;
+  text-align: center;
+  animation: blink 12s infinite;
+  -webkit-animation: blink 12s infinite;
+}
+
 abcd1 {
   padding: 2vw;
   display: flex;
@@ -195,6 +222,7 @@ abcd1 {
     color: #fff6a9;
   }
 }
+
 
 /* .rules {
   left: 30px;

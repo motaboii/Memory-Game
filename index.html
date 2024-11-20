@@ -1,92 +1,65 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Memory Game</title>
-    <link rel="stylesheet" href="style.css" />
 
-    <script src="app.js" charset="utf-8"></script>
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <title>Memory Game</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="app.js" charset="utf-8"></script>
+</head>
 
-  <body>
-    <center>
-      <h2>MeMorY GamE</h2>
-    </center>
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <div class="container">
-      <!-- timer  -->
+<body>
+  <center>
+    <h2>MeMorY GamE</h2>
+  </center>
 
-      <!-- rules  -->
+  <div id="message-container" style="text-align: center; margin-top: 20px; font-size: 30px; color: #D3D3D3; text-shadow: 0 0 5px rgba(255, 255, 255, 0.8), 0 0 15px rgba(255, 255, 255, 0.6), 0 0 20px rgba(255, 255, 255, 0.4);">
+    Welcome to the Memory Game! Click a tile to start.
+  </div>
 
-      <div class="rules">
-        <h3 class="rules-heading">Rules</h3>
-        <ul class="rule-items">
-          <li>There are 6 pairs of identical items.</li>
-          <li>Try to find them all in minimum number of moves and time.</li>
-          <li>Timer will start when you click on any tile.</li>
-          <li>
-            Number of moves and time will be displayed after matching all of
-            them.
-          </li>
-        </ul>
-      </div>
-      <!-- grid  -->
-      <div
-        style="
-          display: flex;
-          flex-direction: column;
-          justify-content: space-between;
-          height: 600px;
-        "
-      >
-        <center>
-          <div class="grid"></div>
-        </center>
-        <br />
-        <br />
-        <br />
-        <br />
-        <center>
-          <span
-            style="
-              border-style: solid;
-              background: white;
-              display: inline-block;
-            "
-          >
-            <h1 style="font-family: 'courier'">
-              SCORE:
-              <span id="result"></span>
-            </h1>
-          </span>
-        </center>
-        <br />
-        <br />
-        <br />
-        <br />
-        <center>
-          <div>
-            <input
-              type="button"
-              class="button"
-              value="PLAY AGAIN!!!"
-              id="playagain"
-            />
-          </div>
-        </center>
-      </div>
+  <br /><br /><br />
+  <div class="container">
+    <div class="rules">
+      <h3 class="rules-heading">Rules</h3>
+      <ul class="rule-items">
+        <li>There are 6 pairs of identical items.</li>
+        <li>Try to find them all in the minimum number of moves and time.</li>
+        <li>Timer starts when you click a tile.</li>
+        <li>Moves and time are displayed after you finish.</li>
+      </ul>
+    </div>
 
-      <div class="wrapper" style="margin-top: 5%">
-        <div class="display">
-          <div id="time">00 : 00</div>
-        </div>
-        <span></span>
-        <span></span>
+    <div style="display: flex; flex-direction: column; height: 300px; max-width: 400px; align-items: center; 
+            justify-content: space-between;">
+      <div class="grid"></div>
+      <br /><br /><br /><br />
+      <!-- <div>
+        <h1 class="starry-text">
+          SCORE: <span id="result">0</span> | MOVES: <span id="move-counter">0</span>
+        </h1>
+      </div> -->
+      <!-- <br /><br /><br /><br /> -->
+      <!-- <div>
+        <input type="button" class="button" value="PLAY AGAIN!!!" id="playagain" />
+      </div> -->
+
+    </div>
+
+    <div class="wrapper" style="margin-top: 5%">
+      <div class="display">
+        <div id="time">00 : 00</div>
       </div>
     </div>
-  </body>
+  </div>
+
+  <div class="score-button-container">
+    <h1 class="starry-text">
+      SCORE: <span id="result">0</span> | MOVES: <span id="move-counter">0</span>
+    </h1>
+    <div>
+      <input type="button" class="button" value="PLAY AGAIN!!!" id="playagain" />
+    </div>
+  </div>
+</body>
+
 </html>
